@@ -2,7 +2,7 @@
 
 using PracticaWebRazor.Models;
 
-namespace PracticaWebRazor.ViewModel
+namespace PracticaWebRazor.ViewModels
 {
     public class Venta
     {

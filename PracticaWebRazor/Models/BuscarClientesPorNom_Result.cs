@@ -10,13 +10,12 @@
 namespace PracticaWebRazor.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Producto
+    public partial class BuscarClientesPorNom_Result
     {
         public int Id { get; set; }
+        public string Apellido { get; set; }
         public string Nombre { get; set; }
-        public string Marca { get; set; }
-        public Nullable<decimal> Precio { get; set; }
+        public Nullable<int> Edad { get; set; }
     }
 }

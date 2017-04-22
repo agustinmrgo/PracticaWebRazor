@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticaWebRazor.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace PracticaWebRazor.Controllers
 {
     public class ProductoController : Controller
     {
+        GestorProductos gestor = new GestorProductos();
         // GET: Productos
         public ActionResult AdminProductos()
         {
@@ -20,9 +22,13 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
-        public ActionResult Guardar()
+        public ActionResult Guardar(ViewModels.Producto producto)
         {
-            return View();
+            if (ModelState.IsValid)
+                gestor.Guardar(producto);
+            else
+                return View("Alta");
+            return View("/Producto/AdminProductos");
         }
     }
 }

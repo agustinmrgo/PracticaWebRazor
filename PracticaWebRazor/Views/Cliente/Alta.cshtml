@@ -1,12 +1,18 @@
-﻿
+﻿@model PracticaWebRazor.ViewModels.Cliente
 @{
     ViewBag.Title = "AltaCliente";
 }
 
 <h2>Alta Cliente</h2>
 
-<form method="post" action="/Cliente/Guardar">
+@*<form method="post" action="/Cliente/Guardar">
     <input type="text" name="Apellido" placeholder="Apellido del cliente">
     <input type="text" name="Nombre" placeholder="Nombre del cliente">
     <input type="submit" value="Guardar">
-</form>
+</form>*@
+
+@using (Html.BeginForm("Guardar", "Cliente"))
+{
+    @Html.ValidationSummary()
+    @Html.EditorForModel() <input type="submit"/>
+}

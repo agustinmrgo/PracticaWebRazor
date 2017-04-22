@@ -10,9 +10,8 @@
 namespace PracticaWebRazor.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Producto
+    public partial class BuscarProducto_Result
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
