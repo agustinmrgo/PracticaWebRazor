@@ -105,6 +105,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -127,6 +128,10 @@
     <Content Include="Views\Home\Ventas.cshtml" />
     <Content Include="Views\Cliente\Alta.cshtml" />
     <Content Include="Views\Cliente\Guardar.cshtml" />
+    <Content Include="Views\Producto\Alta.cshtml" />
+    <Content Include="Views\Producto\Guardar.cshtml" />
+    <Content Include="Views\Producto\AdminProductos.cshtml" />
+    <Content Include="Views\Cliente\AdminClientes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

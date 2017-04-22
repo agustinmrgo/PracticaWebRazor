@@ -5,7 +5,7 @@ namespace PracticaWebRazor.Controllers
     public class ClienteController : Controller
     {
         // GET: Cliente
-        public ActionResult Index()
+        public ActionResult AdminClientes()
         {
             return View();
         }

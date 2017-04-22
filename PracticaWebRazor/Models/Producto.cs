@@ -7,6 +7,8 @@ namespace PracticaWebRazor.Models
 {
     public class Producto
     {
-        public string Nombre { get; set; }
+        public string NomP { get; set; }
+        public string MarcaP { get; set; }
+        public decimal PrecioP { get; set; }
     }
 }

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Alta";
+}
+
+<h2>Alta Producto</h2>
+
+<form method="post" action="/Producto/Guardar">
+    <input type="text" name="NomP" placeholder="Nombre del producto">
+    <input type="text" name="MarcaP" placeholder="Marca del producto">
+    <input type="number" step="any" name="PrecioP" placeholder="Precio del producto">
+    <input type="submit" value="Guardar">
+</form>

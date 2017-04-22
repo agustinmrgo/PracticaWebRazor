@@ -2,12 +2,19 @@
 @using PracticaWebRazor.Models;
 @model Cliente
 
-
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
 <>
-<p>@Model.Apellido</p>
-<p>@Model.Nombre</p>
+<h1>Inicio</h1>
+<h2>Eliga una opcion:</h2>
+<br>
+<form method="post" action="/Producto/AdminProductos">
+    <input type="submit" value="Administrar productos">
+</form>
+<br>
+<form method="post" action="/Cliente/AdminClientes">
+    <input type="submit" value="Administrar clientes">
+</form>
+
+@*<input type="submit" formaction="/Cliente/AdminClientes" value="Administrar clientes">*@
