@@ -1,0 +1,13 @@
+﻿@model PracticaWebRazor.ViewModels.Cliente
+
+@{
+    ViewBag.Title = "Baja";
+}
+
+<h2>Baja Cliente</h2>
+
+@using (Html.BeginForm("Borrar", "Cliente"))
+{
+    @Html.ValidationSummary()
+    @Html.EditorForModel() <input type="submit">
+}

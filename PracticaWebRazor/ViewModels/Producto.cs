@@ -19,6 +19,7 @@ namespace PracticaWebRazor.ViewModels
 
         [Required]
         [DisplayName("Precio:")]
+        [DataType(DataType.Currency)]
         public decimal PrecioP { get; set; }
     }
 }

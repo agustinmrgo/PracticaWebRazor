@@ -11,9 +11,9 @@ namespace PracticaWebRazor.Models
     {
         public List<Producto> listaProductos()
         {
-            var arroz = new Producto { NomP = "arroz" };
-            var fideos = new Producto { NomP = "fideos" };
-            var harina = new Producto { NomP = "harina" };
+            var arroz = new Producto { Nombre = "arroz" };
+            var fideos = new Producto { Nombre = "fideos" };
+            var harina = new Producto { Nombre = "harina" };
             var listaProductos = new List<Producto>();
             listaProductos.Add(arroz);
             listaProductos.Add(fideos);

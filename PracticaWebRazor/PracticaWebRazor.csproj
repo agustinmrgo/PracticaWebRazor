@@ -129,16 +129,20 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccesoDatos\RepositorioClientes.cs" />
     <Compile Include="Models\BuscarClientesPorNom_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -193,11 +197,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Ventas.cshtml" />
     <Content Include="Views\Cliente\Alta.cshtml" />
-    <Content Include="Views\Cliente\Guardar.cshtml" />
     <Content Include="Views\Producto\Alta.cshtml" />
-    <Content Include="Views\Producto\Guardar.cshtml" />
     <Content Include="Views\Producto\AdminProductos.cshtml" />
     <Content Include="Views\Cliente\AdminClientes.cshtml" />
+    <Content Include="Views\Cliente\Baja.cshtml" />
+    <Content Include="Views\Cliente\Listar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

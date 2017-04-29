@@ -10,20 +10,20 @@ namespace PracticaWebRazor.ViewModels
 {
     public class Cliente
     {
-        [Required(ErrorMessage = "Ingrese apellido")]
+        [Required(ErrorMessage = "Ingrese apellido !")]
         public string Apellido { get; set; }
 
-        [Required(ErrorMessage = "Ingrese nombre")]
+        [Required(ErrorMessage = "Ingrese nombre !")]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "Ingrese edad")]
+        [Required(ErrorMessage = "Ingrese edad !")]
         [DisplayName("Edad:")]
         //[Range(15,50,ErrorMessage = "La edad debe estar entre 15 y 50 años")]
         [ValidarEdad]
         public int Edad { get; set; }
 
-        [Required]
+        /*[Required]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        public string Email { get; set; }*/
     }
 } 
