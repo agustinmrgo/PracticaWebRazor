@@ -14,6 +14,7 @@ namespace PracticaWebRazor.Controllers
             return View("Ventas",venta);
         }
         */
+
         public ActionResult Index()
         {
             return View();

@@ -202,6 +202,9 @@
     <Content Include="Views\Cliente\AdminClientes.cshtml" />
     <Content Include="Views\Cliente\Baja.cshtml" />
     <Content Include="Views\Cliente\Listar.cshtml" />
+    <Content Include="Views\Cliente\Mod.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\BajaTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ModificarTemplate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

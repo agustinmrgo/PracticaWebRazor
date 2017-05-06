@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using PracticaWebRazor.Models.AccesoDatos;
 
@@ -18,7 +17,12 @@ namespace PracticaWebRazor.Models
 
         public void Borrar (Models.Cliente cliente)
         {
+            repo.Eliminar(cliente.Apellido, cliente.Nombre);
+        }
 
+        public void Modificar (Models.Cliente cliente, int edadN, string apellidoN, string nombreN)
+        {
+            repo.Modificar(cliente.Nombre, cliente.Apellido, edadN, apellidoN, nombreN);
         }
 
         public List<Cliente> Listar()
