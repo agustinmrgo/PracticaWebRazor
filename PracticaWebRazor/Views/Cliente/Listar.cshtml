@@ -1,13 +1,11 @@
 ﻿@model List<PracticaWebRazor.ViewModels.Cliente> 
 
-
 @{
     ViewBag.Title = "Listar";
 }
 
 <h2>Listar</h2>
-<br>
-<hr>
+<br><hr>
 @foreach (var cliente in Model)
 {
     <label>@cliente.Apellido</label>

@@ -4,10 +4,20 @@
 }
 
 <h3>Administrar Clientes</h3>
-
-<form method="post" action="/Cliente/Alta">
+<br>
+@*<form method="post" action="/Cliente/Alta">
     <input type="submit" value="Alta cliente">
 </form>
+<br>*@
+<div class="btn-group">
+    <div class="col-md-4">
+        <input type="submit" class="btn btn-success" value="Alta cliente">
+    </div>
+    <div class="col-md-4">
+        <input type="submit" class="btn btn-danger" value="Baja cliente">
+    </div>
+</div>
+
 <br>
 <form method="post" action="/Cliente/Baja">
     <input type="submit" value="Baja cliente">
