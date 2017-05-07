@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\Logger.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
@@ -202,9 +203,11 @@
     <Content Include="Views\Cliente\AdminClientes.cshtml" />
     <Content Include="Views\Cliente\Baja.cshtml" />
     <Content Include="Views\Cliente\Listar.cshtml" />
-    <Content Include="Views\Cliente\Mod.cshtml" />
+    <Content Include="Views\Cliente\Modificar.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\BajaTemplate.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ModificarTemplate.cshtml" />
+    <Content Include="Views\Cliente\Buscar.cshtml" />
+    <Content Include="Views\Cliente\Busqueda.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

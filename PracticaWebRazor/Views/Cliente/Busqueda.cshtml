@@ -1,0 +1,31 @@
+﻿@model List<PracticaWebRazor.ViewModels.Cliente>
+
+@{
+    ViewBag.Title = "Busqueda";
+}
+
+<h2>Busqueda</h2>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Apellido</td>
+                <td>@cliente.Nombre</td>
+                <td>@Html.ActionLink("Eliminar por ap y nom", "EliminarPorApeYNom", 
+                   new { apellido = @cliente.Apellido, nombre = @cliente.Nombre })</td>
+                <td>@Html.ActionLink("Eliminar por id", "EliminarPorId",
+                   new { id = cliente.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>

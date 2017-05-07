@@ -3,6 +3,7 @@ using PracticaWebRazor.Models;
 using System.Web.Mvc;
 using System.Collections.Generic;
 using PracticaWebRazor.Extensions;
+using PracticaWebRazor.Common;
 
 namespace PracticaWebRazor.Controllers
 {
@@ -45,13 +46,25 @@ namespace PracticaWebRazor.Controllers
         public ActionResult Borrar (ViewModels.Cliente cliente)
         {
             if (ModelState.IsValid)
-                gestor.Borrar(cliente.ConvertirAModelo());
+                gestor.Eliminar(cliente.ConvertirAModelo());
             else
                 return View("Baja");
             return View("AdminClientes");
         }
 
-        public ActionResult Mod()
+        public ActionResult EliminarPorApeYNom (ViewModels.Cliente cliente)
+        {
+            gestor.Eliminar(cliente.ConvertirAModelo());
+            return RedirectToAction("Listar");
+        }
+
+        public ActionResult EliminarPorId(int id)
+        {
+            gestor.Eliminar(id);
+            return RedirectToAction("Listar");
+        }
+
+        public ActionResult Modificar()
         {
             return View();
         }
@@ -63,10 +76,23 @@ namespace PracticaWebRazor.Controllers
             return View("AdminClientes");
         }
 
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Busqueda(string cliente)
+        {
+            Logger.Log("Paso por Action Busqueda");
+            var clientes = gestor.Buscar(cliente);
+            return View(clientes.ConvertirAViewModels());
+        }
         public ActionResult Listar()
         {
-            var clientes = gestor.Listar(); // la vista recibe un ViewModels ! 
-            return View(clientes.ConvertirAViewModels()); 
+            var clientes = gestor.Listar(); 
+            return View(clientes.ConvertirAViewModels());
+            // la vista recibe un ViewModels ! 
             // puede recibir un Models si no hace falta laburar con varios tipos de datos
         }
     }

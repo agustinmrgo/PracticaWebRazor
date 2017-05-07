@@ -25,6 +25,7 @@ namespace PracticaWebRazor.Extensions
             {
                 var viewCliente = new ViewModels.Cliente
                 {
+                    Id = modelsCliente.Id,
                     Apellido = modelsCliente.Apellido,
                     Nombre = modelsCliente.Nombre,
                 };
