@@ -4,13 +4,35 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>Inicio</h2>
-<form method="post" action="/Producto/AdminProductos">
-    <input class="btn btn-default" type="submit" value="Administrar productos">
-</form>
-<br>
-<form method="post" action="/Cliente/AdminClientes">
-    <input class="btn btn-default" type="submit" value="Administrar clientes">
-</form>
+<h1>Inicio</h1>
+<br />
 
-@*<input type="submit" formaction="/Cliente/AdminClientes" value="Administrar clientes">*@
+<div class="container">
+    <div class="input-group">
+        <a href="/Cliente/AdminClientes">
+            <input class="btn btn-default" type="submit" value="Administrar clientes">
+        </a>
+        <a href="/Producto/AdminProductos">
+            <input class="btn btn-default" type="submit" value="Administrar productos">
+        </a>
+    </div>
+</div>
+
+<br>
+
+@*<div class="container">
+    <div class="row">
+        <div class="input-group">
+            <div class="col-md-pull-5">
+                <a href="/Cliente/AdminClientes">
+                    <input class="btn btn-default" type="submit" value="Administrar clientes">
+                </a>
+            </div>
+            <div class="col-md-pull-7">
+                <a href="/Producto/AdminProductos">
+                    <input class="btn btn-default" type="submit" value="Administrar productos">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>*@
