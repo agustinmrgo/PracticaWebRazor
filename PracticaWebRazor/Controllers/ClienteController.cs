@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Collections.Generic;
 using PracticaWebRazor.Extensions;
 using PracticaWebRazor.Common;
+using System;
 
 namespace PracticaWebRazor.Controllers
 {
@@ -29,21 +30,22 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
-        public ActionResult Guardar(ViewModels.Cliente cliente)
+        [HttpPost]
+        public ActionResult Guardar(ViewCliente cliente)
         {
-            // este metodo le pide al gestor que guarde el cliente
-            // inserta en la tabla de la base de datos
-            /* Hacer: convertir el objeto view model que recibo como parametro a 
+            /* Este metodo le pide al gestor que guarde el cliente
+            inserta en la tabla de la base de datos
+            Hacer: convertir el objeto view model que recibo como parametro a 
             tipo Model para el metodo Guardar del gestor */
             if (ModelState.IsValid)
                 gestor.Guardar(cliente.ConvertirAModelo()); 
-            // no deberia recibir un ViewModel tiene que ser un Model! Se convierte!
+            // No deberia recibir un ViewModel tiene que ser un Model! Se convierte!
             else
                 return View("Alta");
             return View("AdminClientes");
         }
 
-        public ActionResult Borrar (ViewModels.Cliente cliente)
+        public ActionResult Borrar (ViewCliente cliente)
         {
             if (ModelState.IsValid)
                 gestor.Eliminar(cliente.ConvertirAModelo());
@@ -52,7 +54,7 @@ namespace PracticaWebRazor.Controllers
             return View("AdminClientes");
         }
 
-        public ActionResult EliminarPorApeYNom (ViewModels.Cliente cliente)
+        public ActionResult EliminarPorApeYNom (ViewCliente cliente)
         {
             gestor.Eliminar(cliente.ConvertirAModelo());
             return RedirectToAction("Listar");
@@ -69,10 +71,14 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
-        public ActionResult Modificar (ViewModels.Cliente cliente)
+        [HttpPost]
+        public ActionResult Mod (ViewCliente cliente)
         {
+            var apellidoN = Request.Form["ApellidoN"];
+            var nombreN = Request.Form["NombreN"];
+            int edadN; int.TryParse(Request.Form["EdadN"], out edadN);
             if (ModelState.IsValid)
-                return View("Mod");
+                gestor.Modificar(cliente.ConvertirAModelo(), apellidoN, nombreN, edadN);
             return View("AdminClientes");
         }
 

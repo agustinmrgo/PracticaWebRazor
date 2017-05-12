@@ -12,10 +12,12 @@ namespace PracticaWebRazor.Models.AccesoDatos
 
         public RepositorioClientes()
         {
-            ejemploABM.Database.Log = Logger.Log;
+            ejemploABM.Database.Log = Logger.Log; // ??
+            //cada vez que instancie un repositorio la clase Log de Database sera
+            //la clase Log que yo defini ??
         }
 
-        public void Guardar(Cliente cliente)
+        public void Guardar(Models.Cliente cliente)
         {
             ejemploABM.Cliente.Add(cliente);
             ejemploABM.SaveChanges();
@@ -33,10 +35,12 @@ namespace PracticaWebRazor.Models.AccesoDatos
             ejemploABM.SaveChanges();
         }
 
-        //public void Eliminar (int id)
-        //{
-        //    //ejemploABM.Cliente.Remove(ejemploABM.Cliente.Where < Id = id >);  ???
-        //}
+        /*
+        public void Eliminar(int id)
+        {
+            ejemploABM.Cliente.Remove(ejemploABM.Cliente.Where < Id = id >);
+        }
+        */
 
         public void Eliminar (string apellido, string nombre)
         {
@@ -60,9 +64,9 @@ namespace PracticaWebRazor.Models.AccesoDatos
 
         }
 
-        public void Modificar (string apellidoN, string nombreN, int edadN, string apellidoV, string nombreV)
+        public void Modificar (string apellidoV, string nombreV, string apellidoN, string nombreN, int edadN)
         {
-            ejemploABM.ModificarCliente(apellidoN, nombreN, edadN, apellidoV, nombreV);
+            ejemploABM.ModificarCliente(apellidoV, nombreV, apellidoN, nombreN, edadN);
             ejemploABM.SaveChanges();
         }
     }

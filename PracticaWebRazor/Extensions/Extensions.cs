@@ -7,7 +7,7 @@ namespace PracticaWebRazor.Extensions
 {
     public static class Extensions
     {
-        public static Models.Cliente ConvertirAModelo(this ViewModels.Cliente cliente)
+        public static Models.Cliente ConvertirAModelo(this ViewModels.ViewCliente cliente)
         {
             Models.Cliente clte = new Models.Cliente(); //convierto de ViewModels a Models
             clte.Apellido = cliente.Apellido;
@@ -16,14 +16,14 @@ namespace PracticaWebRazor.Extensions
             return clte;
         }
 
-        public static List<ViewModels.Cliente> ConvertirAViewModels(this List<Models.Cliente> listaClientes)
+        public static List<ViewModels.ViewCliente> ConvertirAViewModels(this List<Models.Cliente> listaClientes)
         {
             //var listaClientes = gestor.Listar();
-            var listaViewClientes = new List<ViewModels.Cliente>();
+            var listaViewClientes = new List<ViewModels.ViewCliente>();
 
             foreach (var modelsCliente in listaClientes)
             {
-                var viewCliente = new ViewModels.Cliente
+                var viewCliente = new ViewModels.ViewCliente
                 {
                     Id = modelsCliente.Id,
                     Apellido = modelsCliente.Apellido,

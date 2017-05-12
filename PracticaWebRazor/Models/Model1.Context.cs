@@ -142,8 +142,16 @@ namespace PracticaWebRazor.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GuardarProducto", nombreParameter, marcaParameter, precioParameter);
         }
     
-        public virtual int ModificarCliente(string apellidoN, string nombreN, Nullable<int> edadN, string apellidoV, string nombreV)
+        public virtual int ModificarCliente(string apellidoV, string nombreV, string apellidoN, string nombreN, Nullable<int> edadN)
         {
+            var apellidoVParameter = apellidoV != null ?
+                new ObjectParameter("ApellidoV", apellidoV) :
+                new ObjectParameter("ApellidoV", typeof(string));
+    
+            var nombreVParameter = nombreV != null ?
+                new ObjectParameter("NombreV", nombreV) :
+                new ObjectParameter("NombreV", typeof(string));
+    
             var apellidoNParameter = apellidoN != null ?
                 new ObjectParameter("ApellidoN", apellidoN) :
                 new ObjectParameter("ApellidoN", typeof(string));
@@ -156,15 +164,7 @@ namespace PracticaWebRazor.Models
                 new ObjectParameter("EdadN", edadN) :
                 new ObjectParameter("EdadN", typeof(int));
     
-            var apellidoVParameter = apellidoV != null ?
-                new ObjectParameter("ApellidoV", apellidoV) :
-                new ObjectParameter("ApellidoV", typeof(string));
-    
-            var nombreVParameter = nombreV != null ?
-                new ObjectParameter("NombreV", nombreV) :
-                new ObjectParameter("NombreV", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ModificarCliente", apellidoNParameter, nombreNParameter, edadNParameter, apellidoVParameter, nombreVParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ModificarCliente", apellidoVParameter, nombreVParameter, apellidoNParameter, nombreNParameter, edadNParameter);
         }
     }
 }

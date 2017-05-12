@@ -182,7 +182,7 @@
     </Compile>
     <Compile Include="ViewModels\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Cliente.cs" />
+    <Compile Include="ViewModels\ViewCliente.cs" />
     <Compile Include="ViewModels\ValidarEdad.cs" />
     <Compile Include="ViewModels\Venta.cs" />
   </ItemGroup>

@@ -10,12 +10,12 @@ namespace PracticaWebRazor.Models
     {
         RepositorioClientes repo = new RepositorioClientes();
 
-        public void Guardar(Models.Cliente cliente)
+        public void Guardar(Cliente cliente)
         {
             repo.Guardar(cliente);
         }
 
-        public void Eliminar (Models.Cliente cliente)
+        public void Eliminar (Cliente cliente)
         {
             repo.Eliminar(cliente.Apellido, cliente.Nombre);
         }
@@ -25,9 +25,9 @@ namespace PracticaWebRazor.Models
             repo.Eliminar(id);
         }
 
-        public void Modificar (Models.Cliente cliente, int edadN, string apellidoN, string nombreN)
+        public void Modificar (Cliente cliente, string apellidoN, string nombreN, int edadN)
         {
-            repo.Modificar(cliente.Nombre, cliente.Apellido, edadN, apellidoN, nombreN);
+            repo.Modificar(cliente.Apellido, cliente.Nombre, apellidoN, nombreN, edadN);
         }
 
         public List<Cliente> Listar()

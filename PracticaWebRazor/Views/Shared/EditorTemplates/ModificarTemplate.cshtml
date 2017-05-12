@@ -1,45 +1,37 @@
-﻿<form class="form-horizontal" method="post" action="/Cliente/Modificar">
+﻿<form class="form-horizontal" method="post" action="/Cliente/Mod">
     <fieldset>
-        <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="ApellidoV"></label>
-            <div class="col-md-4">
+            <!-- Text input-->
+            <label class="control-label" for="ApellidoV"></label>
+            <div>
                 <input id="ApellidoV" name="ApellidoV" type="text" placeholder="Apellido anterior" class="form-control input-md">
             </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="NombreV"></label>
-            <div class="col-md-4">
+            <!-- Text input-->
+            <label class="control-label" for="NombreV"></label>
+            <div>
                 <input id="NombreV" name="NombreV" type="text" placeholder="Nombre anterior" class="form-control input-md">
-
             </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="ApellidoN"></label>
-            <div class="col-md-4">
+            <!-- Text input-->
+            <label class="control-label" for="ApellidoN"></label>
+            <div>
                 <input id="ApellidoN" name="ApellidoN" type="text" placeholder="Apellido nuevo" class="form-control input-md">
-
             </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="NombreN"></label>
-            <div class="col-md-4">
+            <!-- Text input-->       
+            <label class="control-label" for="NombreN"></label>
+            <div>
                 <input id="NombreN" name="NombreN" type="text" placeholder="Nombre nuevo" class="form-control input-md">
-
+            </div>
+            <!-- Number input-->       
+            <label class="control-label" for="EdadN"></label>
+            <div>
+                <input id="EdadN" name="EdadN" type="number" placeholder="Edad nueva" class="form-control input-md">
+            </div>
+            <!-- Submit button-->       
+            <div>
+                <br>
+                <input type="submit" class="btn btn-default" value="Modificar">
             </div>
         </div>
-
-        <div class="col-md-4">
-            <br>
-            <input type="submit" class="btn btn-default" value="Modificar">
-        </div>
-
         <!-- Button -->
         @*<div class="form-group">
             <label class="col-md-4 control-label" for="SubmitMod"></label>

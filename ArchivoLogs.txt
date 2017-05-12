@@ -1,0 +1,70 @@
+12-May-17 16:16:49 - INFO: Opened connection at 12-May-17 16:16:49 -03:00
+
+12-May-17 16:16:49 - INFO: Started transaction at 12-May-17 16:16:49 -03:00
+
+12-May-17 16:16:49 - INFO: INSERT [dbo].[Cliente]([Apellido], [Nombre], [Edad])
+VALUES (@0, @1, @2)
+SELECT [Id]
+FROM [dbo].[Cliente]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+12-May-17 16:16:49 - INFO: 
+
+12-May-17 16:16:49 - INFO: -- @0: 'Ledesma' (Type = AnsiString, Size = 50)
+
+12-May-17 16:16:49 - INFO: -- @1: 'Facundo' (Type = AnsiString, Size = 50)
+
+12-May-17 16:16:49 - INFO: -- @2: '12' (Type = Int32)
+
+12-May-17 16:16:49 - INFO: -- Executing at 12-May-17 16:16:49 -03:00
+
+12-May-17 16:16:49 - INFO: -- Completed in 4 ms with result: SqlDataReader
+
+12-May-17 16:16:49 - INFO: 
+
+12-May-17 16:16:49 - INFO: Committed transaction at 12-May-17 16:16:49 -03:00
+
+12-May-17 16:16:49 - INFO: Closed connection at 12-May-17 16:16:49 -03:00
+
+12-May-17 16:18:27 - INFO: Opened connection at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: SELECT TOP (1) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE (([Extent1].[Apellido] = @p__linq__0) OR (([Extent1].[Apellido] IS NULL) AND (@p__linq__0 IS NULL))) AND (([Extent1].[Nombre] = @p__linq__1) OR (([Extent1].[Nombre] IS NULL) AND (@p__linq__1 IS NULL)))
+12-May-17 16:18:27 - INFO: 
+
+12-May-17 16:18:27 - INFO: -- p__linq__0: 'Ledesma' (Type = AnsiString, Size = 8000)
+
+12-May-17 16:18:27 - INFO: -- p__linq__1: 'Facundo' (Type = AnsiString, Size = 8000)
+
+12-May-17 16:18:27 - INFO: -- Executing at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: -- Completed in 3 ms with result: SqlDataReader
+
+12-May-17 16:18:27 - INFO: 
+
+12-May-17 16:18:27 - INFO: Closed connection at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: Opened connection at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: Started transaction at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: DELETE [dbo].[Cliente]
+WHERE ([Id] = @0)
+12-May-17 16:18:27 - INFO: 
+
+12-May-17 16:18:27 - INFO: -- @0: '24' (Type = Int32)
+
+12-May-17 16:18:27 - INFO: -- Executing at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: -- Completed in 2 ms with result: 1
+
+12-May-17 16:18:27 - INFO: 
+
+12-May-17 16:18:27 - INFO: Committed transaction at 12-May-17 16:18:27 -03:00
+
+12-May-17 16:18:27 - INFO: Closed connection at 12-May-17 16:18:27 -03:00
+

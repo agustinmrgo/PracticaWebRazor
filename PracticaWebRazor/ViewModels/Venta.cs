@@ -7,7 +7,7 @@ namespace PracticaWebRazor.ViewModels
     public class Venta
     {
         public List<Producto> Productos { get; set; }
-        public List<Cliente> Clientes { get; set; }
+        public List<ViewCliente> Clientes { get; set; }
 
     }
 }

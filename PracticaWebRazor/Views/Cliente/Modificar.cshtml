@@ -1,11 +1,11 @@
-﻿@model PracticaWebRazor.ViewModels.Cliente
+﻿@model PracticaWebRazor.ViewModels.ViewCliente
 @{
     ViewBag.Title = "Mod";
 }
 
 <h3>Modificar cliente</h3>
 
-@using (Html.BeginForm("Modificar", "Cliente"))
+@using (Html.BeginForm("Mod", "Cliente"))
 {
     @Html.ValidationSummary()
     @Html.EditorForModel("ModificarTemplate")

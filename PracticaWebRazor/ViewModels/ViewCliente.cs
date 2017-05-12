@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace PracticaWebRazor.ViewModels
 {
-    public class Cliente
+    public class ViewCliente
     {
         [HiddenInput(DisplayValue = false)] // oculta el atributo en la vista
         public int? Id { get; set; } = 0; // valor cero por defecto (evita que sea required)
