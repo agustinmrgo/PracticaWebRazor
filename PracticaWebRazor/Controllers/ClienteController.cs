@@ -101,5 +101,17 @@ namespace PracticaWebRazor.Controllers
             // la vista recibe un ViewModels ! 
             // puede recibir un Models si no hace falta laburar con varios tipos de datos
         }
+
+        public ActionResult Detalle(int id)
+        {
+            var cliente = gestor.BuscarPorId(id);
+            return View(cliente.ConvertirAViewModel());
+        }
+
+        public ActionResult Modif(Cliente cliente)
+        {
+            gestor.Modif(cliente);
+            return RedirectToAction("Listar");
+        }
     }
 }

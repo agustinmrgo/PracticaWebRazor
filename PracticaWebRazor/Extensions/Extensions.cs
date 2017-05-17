@@ -33,5 +33,25 @@ namespace PracticaWebRazor.Extensions
             }
             return listaViewClientes;
         }
+
+        public static ViewModels.ViewCliente ConvertirAViewModel(this Models.Cliente cliente)
+        {
+            var clienteViewMod = new ViewModels.ViewCliente
+            {
+                Id = cliente.Id,
+                Apellido = cliente.Apellido,
+                Nombre = cliente.Nombre,
+                Edad = (int)cliente.Edad
+            };
+
+            return clienteViewMod;
+        }
+
+        /*
+         Para ser metodo extensor debe ser estatico y que tenga un this 
+         a la clase a extender como parametro
+         Googlear: automapper ??
+        */
+
     }
 }

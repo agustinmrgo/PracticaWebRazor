@@ -39,5 +39,15 @@ namespace PracticaWebRazor.Models
         {
             return repo.Buscar(cliente);
         }
+
+        public Cliente BuscarPorId(int id)
+        {
+            return repo.BuscarPorId(id);
+        }
+
+        internal void Modif(Cliente cliente)
+        {
+            repo.Modif(cliente); 
+        }
     }
 }

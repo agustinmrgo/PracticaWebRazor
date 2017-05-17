@@ -21,10 +21,17 @@
                 <td>@cliente.Id</td>
                 <td>@cliente.Apellido</td>
                 <td>@cliente.Nombre</td>
+                
                 <td>@Html.ActionLink("Eliminar por ap y nom", "EliminarPorApeYNom", 
-                   new { apellido = @cliente.Apellido, nombre = @cliente.Nombre })</td>
-                <td>@Html.ActionLink("Eliminar por id", "EliminarPorId",
-                   new { id = cliente.Id })</td>
+                   new { apellido = @cliente.Apellido, nombre = @cliente.Nombre })
+                </td>
+                
+                <td>@Html.ActionLink("Eliminar por id", "EliminarPorId", new { id = cliente.Id })
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Modificar", "Detalle",new { id = cliente.Id })
+                </td>
             </tr>
         }
     </tbody>

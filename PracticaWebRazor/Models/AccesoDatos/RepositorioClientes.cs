@@ -35,6 +35,20 @@ namespace PracticaWebRazor.Models.AccesoDatos
             ejemploABM.SaveChanges();
         }
 
+        internal Cliente BuscarPorId(int id)
+        {
+            return ejemploABM.Cliente.First(x => x.Id == id);
+        }
+
+        internal void Modif(Cliente cliente)
+        {
+            var clienteAModificar = ejemploABM.Cliente.First(x => x.Id == cliente.Id);
+            clienteAModificar.Apellido = cliente.Apellido;
+            clienteAModificar.Nombre = cliente.Nombre;
+            clienteAModificar.Edad = cliente.Edad;
+            ejemploABM.SaveChanges();
+        }
+
         /*
         public void Eliminar(int id)
         {
