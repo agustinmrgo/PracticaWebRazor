@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda";
+}
+
+<h2>Busqueda</h2>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var prod in Model)
+        {
+            <tr>
+                <td>@prod.IdProucto</td>
+                <td>@prod.Nombre</td>
+                <td>@prod.Marca</td>
+                <td>@prod.Precio</td>
+                @*<td>@Html.ActionLink("Eliminar","Eliminar")</td>*@
+                @*<td>@Html.ActionLink("Modificar", "???", objetoWTF)</td>*@
+            </tr>
+        }
+    </tbody>
+</table>

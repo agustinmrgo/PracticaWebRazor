@@ -14,7 +14,7 @@ namespace PracticaWebRazor.Models
     
     public partial class Cliente
     {
-        public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> Edad { get; set; }

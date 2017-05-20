@@ -30,19 +30,19 @@ namespace PracticaWebRazor.Models.AccesoDatos
 
         internal void Eliminar(int id)
         {
-            var cliente = ejemploABM.Cliente.First(clte => clte.Id == id);
+            var cliente = ejemploABM.Cliente.First(clte => clte.IdCliente == id);
             ejemploABM.Cliente.Remove(cliente);
             ejemploABM.SaveChanges();
         }
 
         internal Cliente BuscarPorId(int id)
         {
-            return ejemploABM.Cliente.First(x => x.Id == id);
+            return ejemploABM.Cliente.First(x => x.IdCliente == id);
         }
 
         internal void Modif(Cliente cliente)
         {
-            var clienteAModificar = ejemploABM.Cliente.First(x => x.Id == cliente.Id);
+            var clienteAModificar = ejemploABM.Cliente.First(x => x.IdCliente == cliente.IdCliente);
             clienteAModificar.Apellido = cliente.Apellido;
             clienteAModificar.Nombre = cliente.Nombre;
             clienteAModificar.Edad = cliente.Edad;
@@ -83,5 +83,6 @@ namespace PracticaWebRazor.Models.AccesoDatos
             ejemploABM.ModificarCliente(apellidoV, nombreV, apellidoN, nombreN, edadN);
             ejemploABM.SaveChanges();
         }
+
     }
 }

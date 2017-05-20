@@ -90,10 +90,11 @@ namespace PracticaWebRazor.Controllers
         [HttpPost]
         public ActionResult Busqueda(string cliente)
         {
-            Logger.Log("Paso por Action Busqueda");
+            Logger.Log("Paso por Action Busqueda cliente");
             var clientes = gestor.Buscar(cliente);
             return View(clientes.ConvertirAViewModels());
         }
+
         public ActionResult Listar()
         {
             var clientes = gestor.Listar(); 
@@ -113,5 +114,6 @@ namespace PracticaWebRazor.Controllers
             gestor.Modif(cliente);
             return RedirectToAction("Listar");
         }
+
     }
 }

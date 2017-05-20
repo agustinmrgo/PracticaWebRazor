@@ -1,11 +1,21 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "AdminProductos";
 }
 
-<h2>Administrar Productos</h2>
-
+<h3>Administrar productos</h3>
+<br>
 <form method="post" action="/Producto/Alta">
-    <input type="submit" value="Alta nuevo producto">
+    <input class="btn btn-success" type="submit" value="Alta producto">
 </form>
-
+<br>
+<form method="post" action="/Producto/Baja">
+    <input class="btn btn-danger" type="submit" value="Baja producto">
+</form>
+<br>
+<form method="post" action="/Producto/Modificar">
+    <input class="btn btn-info" type="submit" value="Modificar producto">
+</form>
+<br>
+<form method="post" action="/Producto/Buscar">
+    <input class="btn btn-warning" type="submit" value="Buscar producto">
+</form>

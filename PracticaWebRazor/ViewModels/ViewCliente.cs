@@ -10,7 +10,7 @@ namespace PracticaWebRazor.ViewModels
     public class ViewCliente
     {
         [HiddenInput(DisplayValue = false)] // oculta el atributo en la vista
-        public int? Id { get; set; } = 0; // valor cero por defecto (evita que sea required)
+        public int? IdCliente { get; set; } = 0; // valor cero por defecto (evita que sea required)
         // probar con distinto nombre si tira error de Schema
         // signo de preg permite que tome valores nulos y jquery no haga la validacion del campo
         [Required(ErrorMessage = "Ingrese apellido !")]
