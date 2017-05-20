@@ -18,20 +18,20 @@
         @foreach (var cliente in Model)
         {
             <tr>
-                <td>@cliente.IdCliente</td>
+                <td>@cliente.Id</td>
                 <td>@cliente.Apellido</td>
                 <td>@cliente.Nombre</td>
-                <td>
-                    @Html.ActionLink("Eliminar por ap y nom", "EliminarPorApeYNom", 
+                
+                <td>@Html.ActionLink("Eliminar por ap y nom", "EliminarPorApeYNom", 
                    new { apellido = @cliente.Apellido, nombre = @cliente.Nombre })
                 </td>
-                <td>
-                    @Html.ActionLink("Eliminar por id", "EliminarPorId", new { id = cliente.IdCliente })
+                
+                <td>@Html.ActionLink("Eliminar por id", "EliminarPorId", new { id = cliente.Id })
                 </td>
+                
                 <td>
-                    @Html.ActionLink("Modificar", "Detalle", new {id = cliente.IdCliente})
+                    @Html.ActionLink("Modificar", "Detalle",new { id = cliente.Id })
                 </td>
-                <td>@Html.ActionLink("Modificar2","Modificar")</td>
             </tr>
         }
     </tbody>

@@ -14,7 +14,7 @@ namespace PracticaWebRazor.Models
     
     public partial class Producto
     {
-        public int IdProducto { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Marca { get; set; }
         public Nullable<decimal> Precio { get; set; }
