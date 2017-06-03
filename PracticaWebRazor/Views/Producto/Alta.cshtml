@@ -1,4 +1,4 @@
-﻿@model PracticaWebRazor.ViewModels.Producto
+﻿@model PracticaWebRazor.ViewModels.ViewProducto
 
 @{
     ViewBag.Title = "Alta";
@@ -16,5 +16,7 @@
 @using (Html.BeginForm("Guardar", "Producto"))
 {
     @Html.ValidationSummary()
-    @Html.EditorForModel() <input type="submit"/>
+    @Html.EditorForModel() 
+    <br>
+    <input type="submit" value="Guardar"/>
 }

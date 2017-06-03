@@ -21,13 +21,14 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Guardar(ViewModels.ViewProducto producto)
         {
             if (ModelState.IsValid)
                 gestor.Guardar(producto.ConvertirAModelo());
             else
                 return View("Alta");
-            return View("/Producto/AdminProductos");
+            return View("AdminProductos");
         }
 
         public ActionResult Buscar()
@@ -35,6 +36,7 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Busqueda(string prod)
         {
             Logger.Log("Paso por busqueda producto");

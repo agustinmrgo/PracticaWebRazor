@@ -10,10 +10,8 @@ namespace PracticaWebRazor.Extensions
         public static Models.Cliente ConvertirAModelo (this ViewModels.ViewCliente cliente)
         {
             Models.Cliente clte = new Models.Cliente(); //convierto de ViewModels a Models
-            clte.IdCliente = (int) cliente.IdCliente;
-            clte.Apellido = cliente.Apellido;
-            clte.Nombre = cliente.Nombre;
-            clte.Edad = cliente.Edad;
+            //clte.IdCliente = (int) cliente.IdCliente.GetValueOrDefault();
+            clte.Apellido = cliente.Apellido; clte.Nombre = cliente.Nombre; clte.Edad = cliente.Edad;
             return clte;
         }
 
@@ -54,11 +52,9 @@ namespace PracticaWebRazor.Extensions
 
         public static Models.Producto ConvertirAModelo (this ViewModels.ViewProducto producto)
         {
-            Models.Producto prod = new Models.Producto
-            {
-                IdProducto = (int) producto.IdProducto, Marca = producto.Marca,
-                Nombre = producto.Nombre, Precio = producto.Precio
-            };
+            Models.Producto prod = new Models.Producto();
+            prod.IdProducto = (int) producto.IdProducto.GetValueOrDefault(); // ????
+            prod.Marca = producto.Marca; prod.Nombre = producto.Nombre; prod.Precio = producto.Precio;
             return prod;
         }
 
