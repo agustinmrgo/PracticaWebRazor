@@ -95,6 +95,15 @@ namespace PracticaWebRazor.Controllers
             return View(clientes.ConvertirAViewModels());
         }
 
+        [HttpPost]
+        public JsonResult BusquedaJSON(string cliente)
+        {
+            Logger.Log("Paso por Action Busqueda cliente");
+            var clientes = gestor.Buscar(cliente);
+            return Json(clientes.ConvertirAViewModels(), JsonRequestBehavior.AllowGet);
+        }
+
+
         public ActionResult Listar()
         {
             var clientes = gestor.Listar(); 
