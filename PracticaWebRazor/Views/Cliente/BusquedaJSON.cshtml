@@ -1,0 +1,38 @@
+﻿@model List<PracticaWebRazor.ViewModels.ViewCliente>
+
+@{
+    ViewBag.Title = "BusquedaJSON";
+}
+
+<h2>Busqueda</h2>
+
+<table id="tabla" class="table-bordered">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.IdCliente</td>
+                <td>@cliente.Apellido</td>
+                <td>@cliente.Nombre</td>
+                <td>
+                    @Html.ActionLink("Eliminar por ap y nom", "EliminarPorApeYNom",
+                   new { apellido = @cliente.Apellido, nombre = @cliente.Nombre })
+                </td>
+                <td>
+                    @Html.ActionLink("Eliminar por id", "EliminarPorId", new { id = cliente.IdCliente })
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Detalle", new { id = cliente.IdCliente })
+                </td>
+                <td>@Html.ActionLink("Modificar2", "Modificar")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,8 +1,7 @@
 ﻿using PracticaWebRazor.Common;
 using PracticaWebRazor.Extensions;
 using PracticaWebRazor.Models;
-using System.Collections.Generic;
-using System.Web;
+using PracticaWebRazor.ViewModels;
 using System.Web.Mvc;
 
 namespace PracticaWebRazor.Controllers
@@ -22,7 +21,7 @@ namespace PracticaWebRazor.Controllers
         }
 
         [HttpPost]
-        public ActionResult Guardar(ViewModels.ViewProducto producto)
+        public ActionResult Guardar(ViewProducto producto)
         {
             if (ModelState.IsValid)
                 gestor.Guardar(producto.ConvertirAModelo());

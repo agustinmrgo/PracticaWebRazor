@@ -1,10 +1,8 @@
 ﻿using PracticaWebRazor.ViewModels;
 using PracticaWebRazor.Models;
 using System.Web.Mvc;
-using System.Collections.Generic;
 using PracticaWebRazor.Extensions;
 using PracticaWebRazor.Common;
-using System;
 
 namespace PracticaWebRazor.Controllers
 {
@@ -98,11 +96,10 @@ namespace PracticaWebRazor.Controllers
         [HttpPost]
         public JsonResult BusquedaJSON(string cliente)
         {
-            Logger.Log("Paso por Action Busqueda cliente");
+            Logger.Log("Paso por Action BusquedaJSON cliente");
             var clientes = gestor.Buscar(cliente);
             return Json(clientes.ConvertirAViewModels(), JsonRequestBehavior.AllowGet);
         }
-
 
         public ActionResult Listar()
         {

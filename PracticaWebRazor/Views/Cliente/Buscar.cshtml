@@ -5,12 +5,12 @@
 
 <h2>Buscar</h2>
 
-@using (Html.BeginForm("BusquedaJSON", "Cliente"))
+@using (Html.BeginForm("Busqueda", "Cliente"))
 {
     @Html.TextBox("cliente");
     <input type="submit" value="Buscar"/>
 }
-
+<br>
 @Html.TextBox("cliente-2")
 <input id="btn-buscar" type="submit" value="Buscar"/>
 
