@@ -1,37 +1,30 @@
-﻿
+﻿using PracticaWebRazor.Models.AccesoDatos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using PracticaWebRazor.Models;
 
 namespace PracticaWebRazor.Models
 {
-    public class GestorVentas
-    {
-        public List<Producto> listaProductos()
+	public class GestorVentas
+	{
+        RepositorioVentas repo = new RepositorioVentas();
+
+        public void Guardar(Ventas venta)
         {
-            var arroz = new Producto { Nombre = "arroz" };
-            var fideos = new Producto { Nombre = "fideos" };
-            var harina = new Producto { Nombre = "harina" };
-            var listaProductos = new List<Producto>();
-            listaProductos.Add(arroz);
-            listaProductos.Add(fideos);
-            listaProductos.Add(harina);
-            return listaProductos;
+            repo.Guardar(venta);
         }
 
-        public List<Cliente> listaClientes()
+        public List<Ventas> Listar()
         {
-            var cliente1 = new Cliente { Apellido = "Ledesma", Nombre = "Facundo" };
-            var cliente2 = new Cliente { Apellido = "Ortiz", Nombre = "Juan Pablo" };
-            var cliente3 = new Cliente { Apellido = "Dip", Nombre = "Raul" };
-
-            var listaClientes = new List<Cliente>();
-            listaClientes.Add(cliente1);
-            listaClientes.Add(cliente2);
-            listaClientes.Add(cliente3);
-            return listaClientes;
+            return repo.Listar();
         }
+
+
+        //public List<Ventas> Buscar(string venta)
+        //{
+        //    return repo.Buscar(venta);
+        //}
+
     }
 }

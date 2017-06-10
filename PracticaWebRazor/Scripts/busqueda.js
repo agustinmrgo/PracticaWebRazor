@@ -13,7 +13,7 @@ function exito(data) { //data es la respuesta del servidor (JSON en este caso)
         var tr = "<tr><td>" + clientesEncontrados[i].Apellido + "<tr><td>" + clientesEncontrados[i].Nombre
         tabla.find("tbody").append(tr);
     }*/
-    var tabla = $("#tabla")
+    var tabla = $("#tabla");
     $.each(data, function (i, cliente) {
         var tr = "<tr><td>" + cliente.Apellido + "<tr><td>" + cliente.Nombre
         tabla.$('tbody').append(tr);
