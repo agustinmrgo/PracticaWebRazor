@@ -1,32 +1,25 @@
 ﻿$(document).ready(
-function () {
-    $("#btn-buscar").click(obtenerVista)
-});
-
-function exito(data) { //data es la respuesta del servidor (JSON en este caso)
-    //$(document).html(data)
-    //aca iria funcion que agarra un JSON y parsea:
-    /*var clientesEncontrados = data;
-    var tabla = $("#tabla")
-
-    for (var i = 0; i < clientesEncontrados.length; i++) {
-        var tr = "<tr><td>" + clientesEncontrados[i].Apellido + "<tr><td>" + clientesEncontrados[i].Nombre
-        tabla.find("tbody").append(tr);
-    }*/
-    var tabla = $("#tabla");
+    $("#btn-buscar").click(function() { obtenerVista() })
+);
+//data es la respuesta del servidor (JSON en este caso)
+//$(document).html(data)
+function exito(data) {
+    var table = '<table id=\"tabla\" class=\"table-bordered\"><thead><tr><th>Apellido</th><th>Nombre</th></tr></thead><tbody></tbody></table>'
+    $('#tablaBuscar').append(table);
+    
     $.each(data, function (i, cliente) {
-        var tr = "<tr><td>" + cliente.Apellido + "<tr><td>" + cliente.Nombre
-        tabla.$('tbody').append(tr);
+        var bodyTabla = $("#tabla tbody");
+        var tr = "<tr><td>" + cliente.Apellido + "</td><td>" + cliente.Nombre + "</td></tr>";
+        bodyTabla.append(tr);
     })
-
 }
 
 function obtenerVista() {
     $.ajax({ //le paso un object js al metodo .ajax
         url: "/Cliente/BusquedaJSON",
-        data: { cliente: $("#cliente-2").val() }, //guarda la cadena del campo de texto en 'cliente'
-        dataType: 'json',
+        data: { cliente: $("#cliente-2").val() }, //guarda la cadena del campo de texto en 'cliente-2'
+        dataType: 'json', //poner para que parsee el JSON!
         type: "POST",
-        success: exito,
+        success: function (data) { exito(data) }
     })
 }

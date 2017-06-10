@@ -750,3 +750,195 @@ WHERE ([IdCliente] = @0)
 
 05-Jun-17 9:34:42 - INFO: Closed connection at 05-Jun-17 9:34:42 -03:00
 
+10-Jun-17 16:26:44 - INFO: Paso por Action Busqueda cliente
+10-Jun-17 16:26:44 - INFO: Opened connection at 10-Jun-17 16:26:44 -03:00
+
+10-Jun-17 16:26:44 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 16:26:44 - INFO: 
+
+10-Jun-17 16:26:44 - INFO: -- p__linq__0: '%asd%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 16:26:44 - INFO: -- p__linq__1: '%asd%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 16:26:44 - INFO: -- Executing at 10-Jun-17 16:26:44 -03:00
+
+10-Jun-17 16:26:44 - INFO: -- Completed in 6 ms with result: SqlDataReader
+
+10-Jun-17 16:26:44 - INFO: 
+
+10-Jun-17 16:26:44 - INFO: Closed connection at 10-Jun-17 16:26:44 -03:00
+
+10-Jun-17 17:15:24 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:15:24 - INFO: Opened connection at 10-Jun-17 17:15:24 -03:00
+
+10-Jun-17 17:15:24 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:15:24 - INFO: 
+
+10-Jun-17 17:15:24 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:15:24 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:15:24 - INFO: -- Executing at 10-Jun-17 17:15:24 -03:00
+
+10-Jun-17 17:15:24 - INFO: -- Completed in 5 ms with result: SqlDataReader
+
+10-Jun-17 17:15:24 - INFO: 
+
+10-Jun-17 17:15:24 - INFO: Closed connection at 10-Jun-17 17:15:24 -03:00
+
+10-Jun-17 17:16:28 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:16:28 - INFO: Opened connection at 10-Jun-17 17:16:28 -03:00
+
+10-Jun-17 17:16:28 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:16:28 - INFO: 
+
+10-Jun-17 17:16:28 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:16:28 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:16:28 - INFO: -- Executing at 10-Jun-17 17:16:28 -03:00
+
+10-Jun-17 17:16:28 - INFO: -- Completed in 2 ms with result: SqlDataReader
+
+10-Jun-17 17:16:28 - INFO: 
+
+10-Jun-17 17:16:28 - INFO: Closed connection at 10-Jun-17 17:16:28 -03:00
+
+10-Jun-17 17:16:51 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:16:51 - INFO: Opened connection at 10-Jun-17 17:16:51 -03:00
+
+10-Jun-17 17:16:51 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:16:51 - INFO: 
+
+10-Jun-17 17:16:51 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:16:51 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:16:51 - INFO: -- Executing at 10-Jun-17 17:16:51 -03:00
+
+10-Jun-17 17:16:51 - INFO: -- Completed in 0 ms with result: SqlDataReader
+
+10-Jun-17 17:16:51 - INFO: 
+
+10-Jun-17 17:16:51 - INFO: Closed connection at 10-Jun-17 17:16:51 -03:00
+
+10-Jun-17 17:17:32 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:17:32 - INFO: Opened connection at 10-Jun-17 17:17:32 -03:00
+
+10-Jun-17 17:17:32 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:17:32 - INFO: 
+
+10-Jun-17 17:17:32 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:17:32 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:17:32 - INFO: -- Executing at 10-Jun-17 17:17:32 -03:00
+
+10-Jun-17 17:17:32 - INFO: -- Completed in 3 ms with result: SqlDataReader
+
+10-Jun-17 17:17:32 - INFO: 
+
+10-Jun-17 17:17:32 - INFO: Closed connection at 10-Jun-17 17:17:32 -03:00
+
+10-Jun-17 17:18:18 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:18:18 - INFO: Opened connection at 10-Jun-17 17:18:18 -03:00
+
+10-Jun-17 17:18:18 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:18:18 - INFO: 
+
+10-Jun-17 17:18:18 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:18 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:18 - INFO: -- Executing at 10-Jun-17 17:18:18 -03:00
+
+10-Jun-17 17:18:18 - INFO: -- Completed in 2 ms with result: SqlDataReader
+
+10-Jun-17 17:18:18 - INFO: 
+
+10-Jun-17 17:18:18 - INFO: Closed connection at 10-Jun-17 17:18:18 -03:00
+
+10-Jun-17 17:18:36 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:18:36 - INFO: Opened connection at 10-Jun-17 17:18:36 -03:00
+
+10-Jun-17 17:18:36 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:18:36 - INFO: 
+
+10-Jun-17 17:18:36 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:36 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:36 - INFO: -- Executing at 10-Jun-17 17:18:36 -03:00
+
+10-Jun-17 17:18:36 - INFO: -- Completed in 3 ms with result: SqlDataReader
+
+10-Jun-17 17:18:36 - INFO: 
+
+10-Jun-17 17:18:36 - INFO: Closed connection at 10-Jun-17 17:18:36 -03:00
+
+10-Jun-17 17:18:57 - INFO: Paso por Action BusquedaJSON cliente
+10-Jun-17 17:18:57 - INFO: Opened connection at 10-Jun-17 17:18:57 -03:00
+
+10-Jun-17 17:18:57 - INFO: SELECT 
+    [Extent1].[Apellido] AS [Apellido], 
+    [Extent1].[Nombre] AS [Nombre], 
+    [Extent1].[Edad] AS [Edad], 
+    [Extent1].[IdCliente] AS [IdCliente]
+    FROM [dbo].[Cliente] AS [Extent1]
+    WHERE ([Extent1].[Apellido] LIKE @p__linq__0 ESCAPE '~') OR ([Extent1].[Nombre] LIKE @p__linq__1 ESCAPE '~')
+10-Jun-17 17:18:57 - INFO: 
+
+10-Jun-17 17:18:57 - INFO: -- p__linq__0: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:57 - INFO: -- p__linq__1: '%123%' (Type = AnsiString, Size = 8000)
+
+10-Jun-17 17:18:57 - INFO: -- Executing at 10-Jun-17 17:18:57 -03:00
+
+10-Jun-17 17:18:57 - INFO: -- Completed in 0 ms with result: SqlDataReader
+
+10-Jun-17 17:18:57 - INFO: 
+
+10-Jun-17 17:18:57 - INFO: Closed connection at 10-Jun-17 17:18:57 -03:00
+

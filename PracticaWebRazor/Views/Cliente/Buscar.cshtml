@@ -1,4 +1,5 @@
-﻿
+﻿@model List<PracticaWebRazor.ViewModels.ViewCliente>
+
 @{
     ViewBag.Title = "Buscar";
 }
@@ -8,15 +9,22 @@
 @using (Html.BeginForm("Busqueda", "Cliente"))
 {
     @Html.TextBox("cliente")
-    <input type="submit" value="Buscar" />
+    <input type="submit" value="Buscar"/>
 }
 <br>
 
 @Html.TextBox("cliente-2")
 <input id="btn-buscar" type="submit" value="Buscar"/>
 
+<hr>
+
+<div id="tablaBuscar"></div>
+
 @section scripts
-{ @*en Layout.cshtml poner @RenderSection("scripts",false) y solo renderiza donde los llamo con RenderSection*@
-    <script src="~/Scripts/busqueda.js"></script> @*entonces no hace falta llamar a jquery aca*@ 
+{
+    <script src="~/Scripts/busqueda.js"></script> 
 }
-@*con bundle en el layout podria hacer una sola request al servidor para varios scripts*@
+
+@* en Layout.cshtml poner @RenderSection("scripts",false) y solo renderiza donde los llamo con RenderSection
+entonces no hace falta llamar a jquery aca
+con bundle en el layout podria hacer una sola request al servidor para varios scripts *@
