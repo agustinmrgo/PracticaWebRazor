@@ -20,6 +20,20 @@ namespace PracticaWebRazor.Controllers
             return View();
         }
 
+        public ActionResult Baja()
+        {
+            return View();
+        }
+
+        public ActionResult Eliminar(ViewProducto prod)
+        {
+            if (ModelState.IsValid)
+                gestor.Eliminar(prod.ConvertirAModelo());
+            else
+                return View("Baja");
+            return View("AdminClientes");
+        }
+
         [HttpPost]
         public ActionResult Guardar(ViewProducto producto)
         {

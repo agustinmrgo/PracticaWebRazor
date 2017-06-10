@@ -208,7 +208,7 @@
     <Content Include="Views\Cliente\Baja.cshtml" />
     <Content Include="Views\Cliente\Listar.cshtml" />
     <Content Include="Views\Cliente\Modificar.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\BajaTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ClienteBajaTemplate.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ModificarTemplate.cshtml" />
     <Content Include="Views\Cliente\Buscar.cshtml" />
     <Content Include="Views\Cliente\Busqueda.cshtml" />
@@ -217,6 +217,8 @@
     <Content Include="Views\Producto\Listar.cshtml" />
     <Content Include="Views\Producto\Busqueda.cshtml" />
     <Content Include="Views\Cliente\BusquedaJSON.cshtml" />
+    <Content Include="Views\Producto\Baja.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ProductoBajaTemplate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

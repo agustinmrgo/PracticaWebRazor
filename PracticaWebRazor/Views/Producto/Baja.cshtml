@@ -1,0 +1,14 @@
+﻿@model PracticaWebRazor.ViewModels.ViewProducto
+
+@{
+    ViewBag.Title = "Baja";
+}
+
+<h2>Baja Cliente</h2>
+
+@using (Html.BeginForm("Eliminar", "Producto"))
+{
+    @Html.ValidationSummary()
+    @Html.EditorForModel("ProductoBajaTemplate")
+}
+

@@ -8,6 +8,12 @@ namespace PracticaWebRazor.Models.AccesoDatos
     {
         EjemploABMDB ejemploABM = new EjemploABMDB();
 
+        public void Guardar(Producto producto)
+        {
+            ejemploABM.Producto.Add(producto);
+            ejemploABM.SaveChanges();
+        }
+
         public List<Producto> Buscar(string prod)
         {
             var resultado = ejemploABM.Producto.Where(
@@ -15,9 +21,21 @@ namespace PracticaWebRazor.Models.AccesoDatos
             return resultado;
         }
 
-        public void Guardar(Producto producto)
+        public void Eliminar(string nombre, string marca)
         {
-            ejemploABM.Producto.Add(producto);
+            var prod = ejemploABM.Producto.Where(
+                p => p.Nombre==nombre && p.Marca==marca).First();
+            ejemploABM.Producto.Remove(prod);
+            ejemploABM.SaveChanges();
+        }
+
+        public void Modificar(Producto producto)
+        {
+            var prodAModif = ejemploABM.Producto.First(
+                prod => prod.IdProducto == producto.IdProducto);
+            prodAModif.Nombre = producto.Nombre;
+            prodAModif.Marca = producto.Marca;
+            prodAModif.Precio = producto.Precio;
             ejemploABM.SaveChanges();
         }
 

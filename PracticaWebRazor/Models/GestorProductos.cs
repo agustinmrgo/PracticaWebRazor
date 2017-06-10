@@ -17,14 +17,25 @@ namespace PracticaWebRazor.Models
             repo.Guardar(producto);
         }
 
+        public List<Producto> Buscar(string prod)
+        {
+            return repo.Buscar(prod);
+        }
+
+        public void Eliminar(Producto prod)
+        {
+            repo.Eliminar(prod.Nombre, prod.Marca);
+        }
+
+        public void Modificar(Producto prod)
+        {
+            repo.Modificar(prod);
+        }
+
         public List<Producto> Listar()
         {
             return repo.Listar();
         }
 
-        public List<Producto> Buscar(string prod)
-        {
-            return repo.Buscar(prod);
-        }
     }
 }

@@ -7,12 +7,12 @@
 
 @using (Html.BeginForm("Busqueda", "Cliente"))
 {
-    @Html.TextBox("cliente");
-    <input type="submit" value="Buscar"/>
+    @Html.TextBox("cliente")
+    <input type="submit" value="Buscar" />
 }
 <br>
+
 @Html.TextBox("cliente-2")
 <input id="btn-buscar" type="submit" value="Buscar"/>
-
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/busqueda.js"></script>

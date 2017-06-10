@@ -1,4 +1,5 @@
-﻿
+﻿@model List<PracticaWebRazor.ViewModels.ViewProducto>
+
 @{
     ViewBag.Title = "Busqueda";
 }
@@ -18,7 +19,7 @@
         @foreach (var prod in Model)
         {
             <tr>
-                <td>@prod.IdProucto</td>
+                <td>@prod.IdProducto</td>
                 <td>@prod.Nombre</td>
                 <td>@prod.Marca</td>
                 <td>@prod.Precio</td>
