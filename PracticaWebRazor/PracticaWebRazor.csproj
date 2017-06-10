@@ -235,6 +235,7 @@
     <Content Include="Views\Producto\Baja.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ProductoBajaTemplate.cshtml" />
     <Content Include="Views\Ventas\Alta.cshtml" />
+    <Content Include="Views\Ventas\AdminVentas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

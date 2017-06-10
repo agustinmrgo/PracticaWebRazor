@@ -68,10 +68,10 @@ namespace PracticaWebRazor.Controllers
         {
             var listaProductos = gestor.Listar();
             var result = listaProductos.Select(prod => new
-            { value = prod.IdProducto, Name = prod.Nombre });
+            { Name = prod.IdProducto, value = prod.Nombre });
             //devuelve una coleccion de tipo anonimo (mezcla de Id+Nombre)
-            //value es el valor que se obtiene de seleccionar algo en el autocompletar
-            //Name es lo que se muestra mientras autocompleta
+            //value sera el valor que se obtiene de seleccionar algo en el autocompletar
+            //Name sera lo que se muestra mientras autocompleta
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 

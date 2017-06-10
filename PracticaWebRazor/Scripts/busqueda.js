@@ -7,7 +7,7 @@ function exito(data) {
     var table = '<table id=\"tabla\" class=\"table-bordered\"><thead><tr><th>Apellido</th><th>Nombre</th></tr></thead><tbody></tbody></table>'
     $('#tablaBuscar').append(table);
     
-    $.each(data, function (i, cliente) {
+    $.each(data, function (i, cliente) { //para que sirve "i" index ???
         var bodyTabla = $("#tabla tbody");
         var tr = "<tr><td>" + cliente.Apellido + "</td><td>" + cliente.Nombre + "</td></tr>";
         bodyTabla.append(tr);
