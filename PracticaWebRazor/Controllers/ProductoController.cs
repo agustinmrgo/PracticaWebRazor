@@ -3,7 +3,6 @@ using PracticaWebRazor.Extensions;
 using PracticaWebRazor.Models;
 using PracticaWebRazor.ViewModels;
 using System.Web.Mvc;
-using System.Linq;
 
 namespace PracticaWebRazor.Controllers
 {
@@ -62,17 +61,6 @@ namespace PracticaWebRazor.Controllers
         {
             var productos = gestor.Listar();
             return View(productos.ConvertirAViewModels());
-        }
-
-        public JsonResult ObtenerNombreProductos()
-        {
-            var listaProductos = gestor.Listar();
-            var result = listaProductos.Select(prod => new
-            { value = prod.IdProducto, Name = prod.Nombre });
-            //devuelve una coleccion de tipo anonimo (mezcla de Id+Nombre)
-            //value es el valor que se obtiene de seleccionar algo en el autocompletar
-            //Name es lo que se muestra mientras autocompleta
-            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
     }

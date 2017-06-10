@@ -14,9 +14,5 @@
 
 @Html.TextBox("cliente-2")
 <input id="btn-buscar" type="submit" value="Buscar"/>
-
-@section scripts
-{ @*en Layout.cshtml poner @RenderSection("scripts",false) y solo renderiza donde los llamo con RenderSection*@
-    <script src="~/Scripts/busqueda.js"></script> @*entonces no hace falta llamar a jquery aca*@ 
-}
-@*con bundle en el layout podria hacer una sola request al servidor para varios scripts*@
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/busqueda.js"></script>
